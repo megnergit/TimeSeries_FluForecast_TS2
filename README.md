@@ -23,18 +23,18 @@ or
  offered by Ryan Holbrook.
 
  A time series consists of __trend__, __seasonality__, __cycles__, and
- __peculiarity__. For each features, we have a procedure to deal with,
+ __peculiarity__. For each features, we have a standard procedure to deal with,
 
- - For __trend__ : Analytical fitting of the baselines (linear, polynomial, etc).
- - For __seasonality__ : Fourier decomposition.
- - For __cycle__ : Lags.
- - For __peculiarity__ : Categorical features.
+ - __trend__ : Analytical fitting of the baselines (linear, polynomial, etc).
+ - __seasonality__ : Fourier decompositions.
+ - __cycle__ : Lags.
+ - __peculiarity__ : Categorical features.
 
-Here we will learn how to use the lagged features to reproduce cyclic features. 
+Here we will learn how to use the lagged features to reproduce cyclic changes. 
 
 We also learn some terminology.
 
- - __Forecast horizon__ : a part of the time series where we perform the forecast.
+ - __Forecast horizon__ : a part of the time series where we perform the forecast. Usually after the training period.
  - __Forecast origin__ : a point of the time series where the training data ends.
  - __Lead time__ : a part of the time series after the forecast origin, but before
  the forecast horizon starts.
@@ -42,11 +42,11 @@ We also learn some terminology.
  When we have a forecast horizon longer than one unit time, the prediction requires,
  - __Multioutput model__.
 
-There are a few strategies how to create multiple outputs. 
+There are a couple of strategies how to create multiple outputs. 
  
  - __Direct strategy__ : Create one model for each day in the horizon,
  and perform the prediction directly. One needs so many models as
- the forecasting points in the forecast horizon.
+ the forecasting points on the forecast horizon.
 
  - __Recursive strategy__ :  First train a model to predict the first
  day on the horizon. Only the given training data is used for the training.
@@ -64,14 +64,14 @@ There are a few strategies how to create multiple outputs.
 
  From the historical record of the visits to the doctor's office for
  flu in the past, we will forecast the numbers of such visits in the
- future.
+ coming season. 
 
  ## 3. Data
 
  1. The historical record of the visits to the doctor's office over a
      week, starting from 2009 and ending in 2016.
 
- 2. The data above come with the Google search records related to a
+ 2. The data above come with the Google search records related to 
     flu. The keywords and the number of searches are tabulated for
     each week.
 
