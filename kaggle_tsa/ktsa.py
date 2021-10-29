@@ -22,7 +22,6 @@ from statsmodels.tsa.stattools import pacf
 # | Some housekeeping functions.
 # | Later they will go to a module ``../kaggle_geospatial`.
 
-
 def set_cwd(CWD):
     if Path.cwd() != CWD:
         os.chdir(CWD)

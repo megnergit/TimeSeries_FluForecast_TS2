@@ -8,8 +8,10 @@
 or 
 
 2. `py2nb time-series-as-features.py`
-    It creates a Jupyter Notebook `time-series-as-features.ipynb`.
-    Load it on Jupyter and run it there. 
+
+    The command creates a Jupyter Notebook
+    `time-series-as-features.ipynb`. Load it on Jupyter and run it
+    there.
     
 ------------------------------------------------------------------
 
@@ -17,7 +19,7 @@ or
 
  This is a notebook to practice the routine procedures commonly used
  in the time sequence analysis. This notebook is based on the Kaggle
- [Time Series Analysis](https://www.kaggle.com/learn/ti\ me-series)
+ course [Time Series Analysis](https://www.kaggle.com/learn/ti\ me-series)
  offered by Ryan Holbrook.
 
  A time series consists of __trend__, __seasonality__, __cycles__, and
