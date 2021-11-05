@@ -18,7 +18,7 @@ or
 ## 1. Introduction
 
  This is a notebook to practice the routine procedures commonly used
- in the time sequence analysis. This notebook is based on the Kaggle
+ in the time series analysis. This notebook is based on the Kaggle
  course [Time Series Analysis](https://www.kaggle.com/learn/ti\ me-series)
  offered by Ryan Holbrook.
 
@@ -35,7 +35,7 @@ Here we will learn how to use the lagged features to reproduce cyclic changes.
 We also learn some terminology.
 
  - __Forecast horizon__ : a part of the time series where we perform the forecast. Usually after the training period.
- - __Forecast origin__ : a point of the time series where the training data ends.
+ - __Forecast origin__ : a point of the time series from there no more training data is available.
  - __Lead time__ : a part of the time series after the forecast origin, but before
  the forecast horizon starts.
 
@@ -46,7 +46,7 @@ There are a couple of strategies how to create multiple outputs.
  
  - __Direct strategy__ : Create one model for each day in the horizon,
  and perform the prediction directly. One needs so many models as
- the forecasting points on the forecast horizon.
+ the number of forecasting points in the forecast horizon.
 
  - __Recursive strategy__ :  First train a model to predict the first
  day on the horizon. Only the given training data is used for the training.
